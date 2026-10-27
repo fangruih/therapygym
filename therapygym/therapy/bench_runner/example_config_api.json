@@ -1,0 +1,28 @@
+{
+  "models": {
+    "patient": { "type": "CLAUDE_3_7" },
+    "therapist": { "type": "CLAUDE_3_7" },
+    "counselor": { "type": "CLAUDE_3_7" }
+  },
+  "session": {
+    "max_turns": 5,
+    "output_dir": "logs"
+  },
+  "patient": {
+    "id": "5-1",
+    "use_json_dataset": true,
+    "ground_truth_cognitive_model": {
+      "life_history": "",
+      "core_beliefs": [],
+      "core_belief_description": [],
+      "intermediate_beliefs": [],
+      "intermediate_beliefs_during_depression": [],
+      "coping_strategies": [],
+      "cognitive_models": []
+    }
+  },
+  "prompts": { "version": "v7" },
+  "therapist": { "profile_id": "professional_cbt_therapist" }
+}
+
+

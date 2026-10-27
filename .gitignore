@@ -1,0 +1,23 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+uv.lock
+logs/
+outputs/
+checkpoints/
+wandb/
+*.pt
+*.parquet
+
+# Private provider integration and cluster-specific legacy configuration
+therapygym/rllm/llm_api/som_handler.py
+therapygym/rllm/trainer/config/ppo_trainer_fixed.yaml
+therapygym/rllm/agents/therapy_agent_weird.py
+therapygym/rllm/rewards/therapy_judge_back.py

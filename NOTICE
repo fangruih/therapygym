@@ -1,0 +1,11 @@
+TherapyGym
+Copyright 2026 TherapyGym authors
+
+This product includes software developed by the rLLM contributors
+(https://github.com/agentica-project/rllm), licensed under the Apache
+License, Version 2.0. TherapyGym modifies and extends rLLM for
+multi-turn therapy-agent simulation, evaluation, and training.
+
+Third-party datasets, model weights, and hosted model APIs are governed
+by their respective licenses and terms and are not licensed by this file.
+

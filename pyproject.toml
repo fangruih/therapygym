@@ -1,0 +1,70 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "therapygym"
+version = "0.1.0"
+description = "RL Training Framework for Therapy Agents"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.10,<3.12"
+dependencies = [
+    # Core ML dependencies - versions pinned for compatibility
+    # IMPORTANT: torch, vllm, and flash-attn versions must be compatible
+    # verl 0.3.x requires vllm ~0.8.x which requires torch ~2.6.x
+    "torch>=2.6.0,<2.7.0",
+    "torchvision>=0.21.0,<0.22.0",
+    "torchaudio>=2.6.0,<2.7.0",
+    
+    # vLLM - pinned to 0.8.4 for verl 0.3.x compatibility
+    # DO NOT upgrade to 0.13+ without updating verl
+    "vllm>=0.8.4,<0.9.0",
+    
+    # Note: OpenTelemetry versions are managed by vllm/ray
+    # If you get ray dashboard errors, manually upgrade after install:
+    # uv pip install "opentelemetry-api>=1.27" "opentelemetry-sdk>=1.27"
+    
+    "transformers",
+    "accelerate",
+    "ray",
+    "hydra-core",
+    "wandb",
+    "datasets",
+    "omegaconf",
+    "tqdm",
+    "numpy<2.0",
+    # verl imports pkg_resources (provided by setuptools)
+    "setuptools<81",  # pkg_resources deprecated in setuptools>=81
+    "python-dotenv",
+    # Required by therapygym runtime (imported unconditionally)
+    "pandas",
+    "polars",
+    "requests",
+    "openai",
+    # Required by core rollout engine imports
+    "aiohttp",
+    # verl async rollout server depends on FastAPI (verl doesn't always declare it)
+    "fastapi",
+    "uvicorn",
+    "tensordict",
+    "click",
+    "boto3>=1.42.21",
+]
+
+# flash-attn must be installed separately after torch
+# Run: uv pip install "flash-attn>=2.6.0,<2.7.0" --no-build-isolation
+[project.optional-dependencies]
+flash = ["flash-attn>=2.6.0,<2.7.0"]
+
+[tool.uv]
+# flash-attn requires torch at build time
+extra-build-dependencies = { flash-attn = ["torch>=2.6.0,<2.7.0"] }
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["therapygym*"]
+
+[project.urls]
+Homepage = "https://therapygym.stanford.edu"
+Repository = "https://github.com/fangruih/therapygym"

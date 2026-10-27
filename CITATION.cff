@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use TherapyGym, please cite the NeurIPS 2026 paper."
+title: "TherapyGym: Evaluating and Aligning Clinical Fidelity and Safety in Therapy Chatbots"
+type: software
+version: 1.0.0
+date-released: 2026-10-26
+url: "https://therapygym.stanford.edu"
+repository-code: "https://github.com/fangruih/therapygym"
+license: Apache-2.0
+authors:
+  - family-names: Huang
+    given-names: Fangrui
+  - family-names: Chbeir
+    given-names: Souhad
+  - family-names: Khatua
+    given-names: Arpandeep
+  - family-names: Wang
+    given-names: Sheng
+  - family-names: Tan
+    given-names: Sijun
+  - family-names: Ye
+    given-names: Kenan
+  - family-names: Bailey
+    given-names: Lily
+  - family-names: Daniel
+    given-names: Merryn
+  - family-names: Louie
+    given-names: Ryan
+  - family-names: Koyejo
+    given-names: Sanmi
+  - family-names: Adeli
+    given-names: Ehsan
+

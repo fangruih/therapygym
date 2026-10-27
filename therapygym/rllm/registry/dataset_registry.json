@@ -1,0 +1,8 @@
+{
+  "therapy_train": {
+    "train": "/dfs/project/kgrlm/akhatua/therapygym/therapygym/rllm/data/datasets/therapy_train/train.parquet"
+  },
+  "therapy_val": {
+    "val": "/dfs/project/kgrlm/akhatua/therapygym/therapygym/rllm/data/datasets/therapy_val/val.parquet"
+  }
+}
