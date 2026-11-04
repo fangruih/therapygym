@@ -9,7 +9,8 @@ TherapyGym is a research framework for evaluating and improving therapy-oriented
 
 - Project: https://therapygym.stanford.edu
 - Paper: *TherapyGym: Evaluating and Aligning Clinical Fidelity and Safety in Therapy Chatbots* (NeurIPS 2026)
-- Dataset and trained checkpoints: linked from the project page when the archival release is available
+- TherapyJudgeBench: https://huggingface.co/datasets/therapygym/therapyjudgebench
+- TreeSynth patient profiles: https://huggingface.co/datasets/therapygym/treesynth-patient-profiles
 
 ## What is included
 
@@ -19,7 +20,7 @@ TherapyGym is a research framework for evaluating and improving therapy-oriented
 - GRPO training integration built on rLLM and verl;
 - benchmark-runner configuration and prompts.
 
-Patient-profile datasets and third-party corpora are not redistributed in this code repository. Obtain them from their original sources or the separately licensed TherapyGym dataset release.
+Datasets and third-party corpora are not redistributed in this code repository. TherapyJudgeBench and the TreeSynth patient profiles are available from the links above under their separately stated CC BY 4.0 dataset licenses. Other third-party assets retain their original licenses and terms.
 
 ## Installation
 
@@ -100,4 +101,3 @@ TherapyGym code is released under the Apache License 2.0. Portions under `therap
 ## Citation
 
 See [CITATION.cff](CITATION.cff). A proceedings identifier will be added after publication.
-

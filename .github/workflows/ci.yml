@@ -9,7 +9,7 @@ permissions:
   contents: read
 
 jobs:
-  syntax:
+  checks:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -18,3 +18,7 @@ jobs:
           python-version: "3.10"
       - name: Compile Python sources
         run: python -m compileall -q therapygym
+      - name: Install lightweight test dependencies
+        run: pip install pytest requests openai httpx boto3
+      - name: Run unit tests
+        run: pytest -q
